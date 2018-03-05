@@ -9,6 +9,7 @@ public class test {
         Assert.assertTrue(main.prime(7));
         Assert.assertTrue(main.prime(11));
         Assert.assertTrue(main.prime(13));
+        Assert.assertTrue(main.prime(9494411));
         Assert.assertTrue(main.prime(17));
         Assert.assertTrue(main.prime(19));
         Assert.assertTrue(main.prime(23));
