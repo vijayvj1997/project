@@ -1,0 +1,14 @@
+apply plugin: "java"
+repositories {
+    mavenCentral()
+}
+task hello {
+    println 'helloWorld'
+}
+dependencies{
+    testCompile 'junit:junit:4.12'
+}
+sourceSets {
+    main.java.srcDir("scr/main")
+    test.java.srcDir("scr/test")
+}
