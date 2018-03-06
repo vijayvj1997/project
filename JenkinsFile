@@ -3,30 +3,22 @@ pipeline{
         stages{
             stage('clean'){
                 steps{
-                    withGradle(gradle: 'Gradle'){
-                    sh 'gradlew clean'
-                    }
+                   echo 'Clean Stage'
                 }
             }
             stage('compile'){
                             steps{
-                                withGradle(gradle: 'Gradle'){
-                                sh 'gradlew compile'
-                                }
+                                echo 'Compile Stage'
                             }
                         }
             stage('build'){
                             steps{
-                                withGradle(gradle: 'Gradle'){
-                                sh 'gradlew build'
-                                }
+                                echo 'Build Stage'
                             }
                         }
             stage('test'){
                             steps{
-                                withGradle(gradle: 'Gradle'){
-                                sh 'gradlew test'
-                                }
+                              echo 'Test Stage'
                             }
                         }
         }
