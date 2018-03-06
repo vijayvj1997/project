@@ -9,7 +9,7 @@ pipeline{
             stage('compile'){
                             steps{
                                 echo 'Compile Stage'
-                                bat 'cd C:\Users\kidas\IdeaProjects\project'
+                                bat 'cd C:/Users/kidas/IdeaProjects/project'
 
                             }
                         }
