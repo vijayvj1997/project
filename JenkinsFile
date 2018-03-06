@@ -9,6 +9,7 @@ pipeline{
             stage('compile'){
                             steps{
                                 echo 'Compile Stage'
+                                sh 'javac main'
                             }
                         }
             stage('build'){
