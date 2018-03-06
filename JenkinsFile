@@ -9,6 +9,8 @@ pipeline{
             stage('compile'){
                             steps{
                                 echo 'Compile Stage'
+                                bat 'pwd'
+
                             }
                         }
             stage('build'){
