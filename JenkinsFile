@@ -4,23 +4,29 @@ pipeline{
             stage('clean'){
                 steps{
                    echo 'Clean Stage'
+                   bat 'cd C:/Users/kidas/IdeaProjects/project'
+                   bat 'gradlew clean'
                 }
             }
             stage('compile'){
                             steps{
                                 echo 'Compile Stage'
                                 bat 'cd C:/Users/kidas/IdeaProjects/project'
-
+                                bat 'gradlew compile'
                             }
                         }
             stage('build'){
                             steps{
                                 echo 'Build Stage'
+                                bat 'cd C:/Users/kidas/IdeaProjects/project'
+                                bat 'gradlew build'
                             }
                         }
             stage('test'){
                             steps{
                               echo 'Test Stage'
+                              bat 'cd C:/Users/kidas/IdeaProjects/project'
+                              bat 'gradlew test'
                             }
                         }
         }
