@@ -9,8 +9,6 @@ pipeline{
             stage('compile'){
                             steps{
                                 echo 'Compile Stage'
-                                sh 'cd \project\src\main\java'
-                                sh 'javac main'
                             }
                         }
             stage('build'){
