@@ -20,6 +20,7 @@ pipeline{
                                 echo 'Build Stage'
                                 bat 'cd C:/Users/kidas/IdeaProjects/project'
                                 bat 'gradlew build'
+                                build 'test2'
                             }
                         }
             stage('test'){
