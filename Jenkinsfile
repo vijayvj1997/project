@@ -10,9 +10,9 @@ pipeline {
             bat 'gradlew clean'
           }
         }
-        stage('') {
+        stage('error') {
           steps {
-            build 'test1'
+            build 'testPipeline'
           }
         }
       }
