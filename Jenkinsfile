@@ -1,41 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('clean') {
-      parallel {
-        stage('clean') {
-          steps {
-            echo 'Clean Stage'
-            bat 'cd C:/Users/kidas/IdeaProjects/project'
-            bat 'gradlew clean'
-          }
-        }
-        stage('error') {
-          steps {
-            build 'testPipeline'
-          }
-        }
-      }
-    }
-    stage('compile') {
+    stage('Build') {
       steps {
-        echo 'Compile Stage'
-        bat 'cd C:/Users/kidas/IdeaProjects/project'
-        bat 'gradlew compileJava'
-      }
-    }
-    stage('build') {
-      steps {
-        echo 'Build Stage'
-        bat 'cd C:/Users/kidas/IdeaProjects/project'
-        bat 'gradlew build'
-      }
-    }
-    stage('test') {
-      steps {
-        echo 'Test Stage'
-        bat 'cd C:/Users/kidas/IdeaProjects/project'
-        bat 'gradlew test'
+        echo 'Stage Build'
       }
     }
   }
