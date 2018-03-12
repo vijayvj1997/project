@@ -6,5 +6,34 @@ pipeline {
         echo 'Stage Build'
       }
     }
+    stage('Acceptance') {
+      steps {
+        echo 'Stage Acceptance'
+      }
+    }
+    stage('Integration') {
+      steps {
+        echo 'Integration'
+      }
+    }
+    stage('UAT') {
+      parallel {
+        stage('UAT') {
+          steps {
+            echo 'Stage UAT'
+          }
+        }
+        stage('Performance') {
+          steps {
+            echo 'Stage Performance'
+          }
+        }
+      }
+    }
+    stage('Public') {
+      steps {
+        echo 'Stage Public'
+      }
+    }
   }
 }
