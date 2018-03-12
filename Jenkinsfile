@@ -13,7 +13,7 @@ pipeline {
     }
     stage('Integration') {
       steps {
-        echo 'Integration'
+        echo 'Stage Integration'
       }
     }
     stage('UAT') {
