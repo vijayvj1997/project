@@ -21,10 +21,10 @@ pipeline {
         parallel(
           "Test" : {
             echo 'Stage Test'
-          }
+          },
           "Performance" : {
             echo 'Stage Performance'
-          }
+          },
           "Trigger" : {
             echo 'Stage Trigger'
             echo 'Triggering a new Job'
