@@ -16,21 +16,25 @@ pipeline {
         echo 'Stage Integration'
       }
     }
-    stage('UAT') {
-      steps{
-        parallel(
-          "Test" : {
+    stage('Parallel') {
+      parallel {
+        stage('Test') {
+          steps {
             echo 'Stage Test'
-          },
-          "Performance" : {
+          }
+        }
+        stage('Performance') {
+          steps {
             echo 'Stage Performance'
-          },
-          "Trigger" : {
+          }
+        }
+        stage('Trigger') {
+          steps {
             echo 'Stage Trigger'
             echo 'Triggering a new Job'
             build 'new'
           }
-          )
+        }
       }
     }
     stage('Public') {
