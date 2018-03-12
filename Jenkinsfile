@@ -28,6 +28,11 @@ pipeline {
             echo 'Stage Performance'
           }
         }
+        stage('Trigger') {
+          steps {
+            build 'new'
+          }
+        }
       }
     }
     stage('Public') {
