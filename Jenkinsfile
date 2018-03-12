@@ -17,22 +17,20 @@ pipeline {
       }
     }
     stage('UAT') {
-      parallel {
-        stage('UAT') {
-          steps {
-            echo 'Stage UAT'
+      steps{
+        parallel(
+          "Test" : {
+            echo 'Stage Test'
           }
-        }
-        stage('Performance') {
-          steps {
+          "Performance" : {
             echo 'Stage Performance'
           }
-        }
-        stage('Trigger') {
-          steps {
+          "Trigger" : {
+            echo 'Stage Trigger'
+            echo 'Triggering a new Job'
             build 'new'
           }
-        }
+          )
       }
     }
     stage('Public') {
